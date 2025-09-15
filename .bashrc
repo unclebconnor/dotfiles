@@ -1,0 +1,18 @@
+# custom
+export PS1="\[\e[1;34m\]bcon:\[\e[0;32m\]\W $\[\e[0m\] "
+export CLICOLOR=1
+export LSCOLORS=ebfxcxdxbxegedabagacad
+
+alias dd-compose='docker-compose -f $DATADOG_ROOT/compose.yaml'
+
+if [ -f ~/.git-completion.bash ]; then
+  . ~/.git-completion.bash
+fi
+
+function dd () {
+	cd "$DATADOG_ROOT/$1"
+}
+# publickey bug
+function fix () {
+    export SSH_AUTH_SOCK=$(find /tmp/ssh-* -type s 2>&1 | head -n 1)
+}
