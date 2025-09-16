@@ -1,27 +1,4 @@
 # append to .gitconfig if needed
 
-[url "git@github.com:"]
-	insteadOf = https://github.com/
-[fetch]
-	prune = true
-[pull]
-	rebase = false
-[alias]
-	lg1 = log --color --all --pretty='format:%d %Cgreen%h%Creset %an - %s' --graph
-	lg2 = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
-[dd-gitsign]
-	username = unclebconnor
-[user]
-	name = Brian Connor
-	email = brian.connor@datadoghq.com
-[commit]
-	gpgSign = true
-[tag]
-	gpgSign = true
-[gpg]
-	format = ssh
-[gpg "ssh"]
-	program = dd-gitsign
-	allowedSignersFile = /home/bits/.config/gitsign/allowed-signers
 [core]
 	editor = code --wait
