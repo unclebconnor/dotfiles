@@ -18,3 +18,6 @@ function dd () {
 function fix () {
     export SSH_AUTH_SOCK=$(find /tmp/ssh-* -type s 2>&1 | head -n 1)
 }
+
+# initialize dogweb on load
+source /etc/profile.d/10-dogweb-workspace-env.sh
